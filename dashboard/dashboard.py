@@ -24,8 +24,8 @@ st.markdown('---')
 @st.cache_data
 def load_data():
     try:
-        day_df = pd.read_csv('../dataset/day.csv')
-        hour_df = pd.read_csv('../dataset/hour.csv')
+        day_df = pd.read_csv('./dataset/day.csv')
+        hour_df = pd.read_csv('./dataset/hour.csv')
         day_df['dteday'] = pd.to_datetime(day_df['dteday'])
         hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
         return day_df, hour_df
